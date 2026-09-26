@@ -17,13 +17,15 @@ export const mainNav: NavItem[] = [
       { label: 'Campus / Community', to: '/get-involved/campus', text: 'Bring your college or community group' },
       { label: 'Internships / Careers', to: '/careers', text: 'Work or intern with our team' },
       { label: 'Events', to: '/events', text: 'Drives, camps and meetups' },
+      { label: 'Verify ID & Certificates', to: '/verify', text: 'Online verification portal with QR code' },
     ],
   },
+  { label: 'Verify', to: '/verify' },
   { label: 'Contact', to: '/contact' },
 ];
 
 export const footerNav = [
   { title: 'Organisation', links: [['About Us', '/about'], ['Our Work', '/programmes'], ['Impact', '/impact'], ['Stories', '/stories'], ['Events', '/events'], ['Gallery', '/gallery']] },
   { title: 'Get Involved', links: [['Donate', '/donate'], ['Volunteer', '/volunteer'], ['Fundraise', '/fundraise'], ['CSR Partnerships', '/csr'], ['Careers', '/careers'], ['Campaigns', '/campaigns']] },
-  { title: 'Trust & Help', links: [['Transparency', '/transparency'], ['FAQ', '/faq'], ['Contact', '/contact'], ['Privacy Policy', '/legal/privacy'], ['Terms', '/legal/terms'], ['Donation / Refund Policy', '/legal/donation-refund'], ['Safeguarding', '/legal/safeguarding']] },
+  { title: 'Trust & Verification', links: [['Verify ID & Certificate', '/verify'], ['Transparency', '/transparency'], ['FAQ', '/faq'], ['Contact', '/contact'], ['Privacy Policy', '/legal/privacy'], ['Terms', '/legal/terms'], ['Donation / Refund Policy', '/legal/donation-refund']] },
 ] as const;

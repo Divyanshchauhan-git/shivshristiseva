@@ -33,6 +33,7 @@ const Contact = lazy(() => import('@/pages/public/Info').then((m) => ({ default:
 const Faq = lazy(() => import('@/pages/public/Info').then((m) => ({ default: m.Faq })));
 const Transparency = lazy(() => import('@/pages/public/Info').then((m) => ({ default: m.Transparency })));
 const Legal = lazy(() => import('@/pages/public/Info').then((m) => ({ default: m.Legal })));
+const Verify = lazy(() => import('@/pages/public/Verify'));
 
 /* Admin bundle is loaded only when /admin is visited. */
 const AdminShell = lazy(() => import('@/admin/AdminShell'));
@@ -77,6 +78,7 @@ export default function App() {
                 <Route path="contact" element={<Contact />} />
                 <Route path="faq" element={<Faq />} />
                 <Route path="transparency" element={<Transparency />} />
+                <Route path="verify" element={<Verify />} />
                 <Route path="legal/:slug" element={<Legal />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
