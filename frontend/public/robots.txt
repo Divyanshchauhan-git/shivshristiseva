@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /donate/status/
+
+Sitemap: https://www.example.org/sitemap.xml
