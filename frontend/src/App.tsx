@@ -10,6 +10,7 @@ import Home from '@/pages/public/Home';
 
 /* Route-level code splitting: each page group is its own chunk. */
 const About = lazy(() => import('@/pages/public/About'));
+const Team = lazy(() => import('@/pages/public/Team'));
 const Impact = lazy(() => import('@/pages/public/Impact'));
 const NotFound = lazy(() => import('@/pages/public/NotFound'));
 const P = lazy(() => import('@/pages/public/Programmes').then((m) => ({ default: m.Programmes })));
@@ -56,6 +57,9 @@ export default function App() {
               <Route element={<PublicLayout />}>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
+                <Route path="team" element={<Team />} />
+                <Route path="our-team" element={<Team />} />
+                <Route path="governance" element={<Team />} />
                 <Route path="programmes" element={<P />} />
                 <Route path="programmes/:slug" element={<PD />} />
                 <Route path="our-work" element={<P />} />

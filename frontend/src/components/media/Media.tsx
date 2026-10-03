@@ -2,11 +2,12 @@ import type { Theme } from '@/types';
 import { cn } from '@/utils/format';
 import { Scene } from './Scene';
 import { themeIcon } from './Icon';
+import { getThemeImage } from './themeImages';
 
 interface MediaProps {
   theme: Theme;
   seed?: number;
-  /** Real image URL (from object storage / CDN). When absent, an illustration is shown. */
+  /** Real image URL (from object storage / CDN). When absent, theme photo is shown. */
   src?: string;
   alt: string;
   className?: string;
@@ -15,26 +16,12 @@ interface MediaProps {
   priority?: boolean;
 }
 
-const defaultThemeImages: Partial<Record<Theme, string>> = {
-  education: '/images/child_education.jpg',
-  child: '/images/child_education.jpg',
-  women: '/images/women_empowerment.jpg',
-  livelihood: '/images/women_livelihood.jpg',
-  animals: '/images/animal_rescue.jpg',
-  health: '/images/healthcare_camp.jpg',
-  elderly: '/images/healthcare_camp.jpg',
-  community: '/images/hero_community.jpg',
-  volunteer: '/images/hero_community.jpg',
-  food: '/images/hero_community.jpg',
-};
-
 /**
- * Image slot. Uses real NGO photography when available or provided,
- * with subtle hover zoom and accessible fallback.
+ * Image slot. Uses authentic Indian NGO photography with subtle hover zoom and accessible fallback.
  */
 export function Media({ theme, seed = 1, src, alt, className, ratio = 'aspect-[4/3]', badge = false, priority }: MediaProps) {
   const I = themeIcon[theme];
-  const photo = src || defaultThemeImages[theme];
+  const photo = src || getThemeImage(theme, seed);
 
   return (
     <div className={cn('group relative w-full max-w-full overflow-hidden bg-surface-2', ratio, className)}>

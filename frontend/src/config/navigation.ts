@@ -5,6 +5,7 @@ export interface NavItem { label: string; to: string; children?: { label: string
 export const mainNav: NavItem[] = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about' },
+  { label: 'Our Team', to: '/team' },
   { label: 'Our Work', to: '/programmes', children: programmes.map((p) => ({ label: p.title, to: `/programmes/${p.slug}`, text: p.short })) },
   { label: 'Campaigns', to: '/campaigns' },
   { label: 'Impact', to: '/impact' },
@@ -25,7 +26,7 @@ export const mainNav: NavItem[] = [
 ];
 
 export const footerNav = [
-  { title: 'Organisation', links: [['About Us', '/about'], ['Our Work', '/programmes'], ['Impact', '/impact'], ['Stories', '/stories'], ['Events', '/events'], ['Gallery', '/gallery']] },
+  { title: 'Organisation', links: [['About Us', '/about'], ['Our Team & Governance', '/team'], ['Our Work', '/programmes'], ['Impact', '/impact'], ['Stories', '/stories'], ['Events', '/events'], ['Gallery', '/gallery']] },
   { title: 'Get Involved', links: [['Donate', '/donate'], ['Volunteer', '/volunteer'], ['Fundraise', '/fundraise'], ['CSR Partnerships', '/csr'], ['Careers', '/careers'], ['Campaigns', '/campaigns']] },
   { title: 'Trust & Verification', links: [['Verify ID & Certificate', '/verify'], ['Transparency', '/transparency'], ['FAQ', '/faq'], ['Contact', '/contact'], ['Privacy Policy', '/legal/privacy'], ['Terms', '/legal/terms'], ['Donation / Refund Policy', '/legal/donation-refund']] },
 ] as const;

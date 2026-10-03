@@ -3,23 +3,13 @@ import type { Theme } from '@/types';
 import { Scene } from '@/components/media/Scene';
 import { Breadcrumbs } from '@/components/ui/Section';
 
-const heroThemeImages: Partial<Record<Theme, string>> = {
-  community: '/images/hero_community.jpg',
-  education: '/images/child_education.jpg',
-  child: '/images/child_education.jpg',
-  women: '/images/women_empowerment.jpg',
-  livelihood: '/images/women_livelihood.jpg',
-  animals: '/images/animal_rescue.jpg',
-  health: '/images/healthcare_camp.jpg',
-  elderly: '/images/healthcare_camp.jpg',
-  volunteer: '/images/hero_community.jpg',
-};
+import { getThemeImage } from '@/components/media/themeImages';
 
 /** Interior page hero: deep peacock band with real photography bleeding in from the right. */
 export function PageHero({ title, eyebrow, text, crumbs, theme = 'community', seed = 3, children }: {
   title: ReactNode; eyebrow?: string; text?: ReactNode; crumbs: { label: string; to?: string }[]; theme?: Theme; seed?: number; children?: ReactNode;
 }) {
-  const photo = heroThemeImages[theme];
+  const photo = getThemeImage(theme, seed);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#072427] via-[#0B3B3E] to-[#0A3338] text-white">

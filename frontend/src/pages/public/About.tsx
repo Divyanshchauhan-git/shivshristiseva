@@ -131,7 +131,7 @@ export default function About() {
 
       <section id="team" className="section bg-surface-2/60" aria-labelledby="team-title">
         <div className="container-page">
-          <SectionHeader id="team-title" eyebrow="Team & leadership" title="The people behind the work." text="Replace these placeholders with real team members who have agreed to be listed." />
+          <SectionHeader id="team-title" eyebrow="Team & leadership" title="The people behind the work." text="Replace these placeholders with real team members who have agreed to be listed." action={<ButtonLink to="/team" variant="secondary" size="sm">View Full Team & Governance →</ButtonLink>} />
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
             {team.map((m, i) => (
               <div key={m.role} className="text-center">

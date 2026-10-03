@@ -1,5 +1,7 @@
 import { memo, useId } from 'react';
 import type { Theme } from '@/types';
+import { cn } from '@/utils/format';
+import { getThemeImage } from './themeImages';
 
 /**
  * Paper-cut landscape illustrations used in place of photographs until the NGO
@@ -43,6 +45,20 @@ function hillPath(r: () => number, base: number, amp: number, w = 400, h = 300) 
 interface SceneProps { theme: Theme; seed?: number; className?: string; birds?: boolean }
 
 export const Scene = memo(function Scene({ theme, seed = 1, className, birds = true }: SceneProps) {
+  const photo = getThemeImage(theme, seed);
+  if (photo) {
+    return (
+      <img
+        src={photo}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        className={cn('h-full w-full object-cover', className)}
+        aria-hidden="true"
+      />
+    );
+  }
+
   const uid = useId().replace(/:/g, '');
   const pal = themePalette[theme];
   const r = rng(seed * 31 + theme.length * 7);
