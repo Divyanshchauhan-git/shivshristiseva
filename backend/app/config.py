@@ -8,7 +8,7 @@ class Settings(BaseSettings):
 
     app_env: str = "development"
     site_url: str = "http://localhost:5173"
-    cors_origins: str = "http://localhost:5173"
+    cors_origins: str = "https://shivshristiseva-ziif.vercel.app,http://localhost:5173,http://localhost:3000"
     database_url: str = "sqlite:///./dev.db"
 
     jwt_secret: str = "dev-only-change-me"
@@ -37,7 +37,11 @@ class Settings(BaseSettings):
 
     @property
     def cors_list(self) -> list[str]:
-        return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+        origins = [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+        deployed_frontend = "https://shivshristiseva-ziif.vercel.app"
+        if deployed_frontend not in origins:
+            origins.append(deployed_frontend)
+        return origins
 
 
 @lru_cache
