@@ -6,11 +6,13 @@ from .config import get_settings
 
 settings = get_settings()
 
-db_url = settings.database_url
-# On Vercel / AWS Lambda serverless, the deployment root directory is read-only.
-# Local SQLite must write to /tmp to prevent "readonly database" operational errors.
-if (os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")) and db_url.startswith("sqlite") and "/tmp" not in db_url:
-    db_url = "sqlite:////tmp/dev.db"
+def _resolve_db_url(url: str) -> str:
+    if url.startswith("sqlite") and "/tmp" not in url:
+        if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME") or not os.access(".", os.W_OK):
+            return "sqlite:////tmp/dev.db"
+    return url
+
+db_url = _resolve_db_url(settings.database_url)
 
 engine = create_engine(
     db_url,
