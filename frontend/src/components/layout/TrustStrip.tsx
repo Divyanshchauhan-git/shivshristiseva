@@ -1,4 +1,4 @@
-import { ShieldCheck, Award, FileCheck, Building2, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Award, Building2, CheckCircle2 } from 'lucide-react';
 import { brand } from '@/config/brand';
 
 export function TrustStrip() {

@@ -17,13 +17,13 @@ export function LogoMark({ className }: { className?: string }) {
 export function Logo({ light, className }: { light?: boolean; className?: string }) {
   const [first, ...rest] = brand.shortName.split(' ');
   return (
-    <Link to="/" className={cn('group inline-flex items-center gap-2.5 rounded-lg', className)} aria-label={`${brand.name}, home`}>
-      <LogoMark className="h-10 w-10 shrink-0 transition-transform duration-300 group-hover:-rotate-6" />
+    <Link to="/" className={cn('group inline-flex items-center gap-2 sm:gap-2.5 rounded-lg shrink-0', className)} aria-label={`${brand.name}, home`}>
+      <LogoMark className="h-8 w-8 sm:h-10 sm:w-10 shrink-0 transition-transform duration-300 group-hover:-rotate-6" />
       <span className="flex flex-col leading-none">
-        <span className={cn('font-display text-[1.28rem] tracking-tight', light ? 'text-white' : 'text-fg')}>
+        <span className={cn('font-display text-sm sm:text-[1.28rem] tracking-tight', light ? 'text-white' : 'text-fg')}>
           {first} <span className={light ? 'text-[#F4B154]' : 'text-brand-text'}>{rest.join(' ')}</span>
         </span>
-        <span className={cn('mt-1 flex items-center gap-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.22em]', light ? 'text-white/65' : 'text-muted')}>
+        <span className={cn('mt-0.5 sm:mt-1 flex items-center gap-1.5 text-[0.58rem] sm:text-[0.62rem] font-semibold uppercase tracking-[0.18em] sm:tracking-[0.22em]', light ? 'text-white/65' : 'text-muted')}>
           Sansthan <span className="hidden font-deva sm:inline text-[0.72rem] normal-case tracking-normal" lang="hi">{brand.nativeName}</span>
         </span>
       </span>
