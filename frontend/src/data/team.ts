@@ -204,16 +204,16 @@ export const executiveLeadership: TeamMember[] = [
   },
   {
     id: 'exec-secretary',
-    name: '[Secretary Name]',
+    name: 'Dharmender Kumar',
     role: 'Secretary',
     designation: 'General Secretary',
-    credentials: 'Public Administration & Operations',
+    credentials: 'Institutional Governance & Public Administration',
     level: 'executive',
-    bio: 'Coordinates board meetings, institutional correspondence, statutory documentation, and inter-departmental workflows.',
-    image: '',
+    bio: 'Oversees board documentation, institutional correspondence, statutory compliance filings, and administrative coordination across all Sansthan programmes.',
+    image: '/images/dharmender_kumar.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:secretary@example.org',
+      email: 'mailto:dharmender.kumar@shivshristiseva.org',
     },
   },
   {

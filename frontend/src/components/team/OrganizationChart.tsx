@@ -145,8 +145,8 @@ export function OrganizationChart() {
                 {/* Vertical drop line */}
                 <div className="absolute -top-6 h-6 w-0.5 bg-brand/40" />
                 <OrgNode
-                  title="Secretary"
-                  role="Institutional Governance & Records"
+                  title="Dharmender Kumar"
+                  role="General Secretary (Governance & Records)"
                   category="Secretariat"
                   variant="default"
                   className="w-full"

@@ -151,7 +151,7 @@ const verifiedRecords = {
       description: 'In recognition of outstanding dedication and compassionate service towards community animal rescue, emergency care, and daily feeding programs across Delhi-NCR.',
       date: '15 Aug 2024',
       signatory: 'Dr. R. K. Sharma (President)',
-      signatory2: 'S. N. Chauhan (Secretary)',
+      signatory2: 'Dharmender Kumar (Secretary)',
     },
     {
       id: 'SSS-CERT-2024-411',
@@ -160,7 +160,7 @@ const verifiedRecords = {
       description: 'For selfless commitment to teaching and conducting daily remedial classes for over 60 underserved children at the Rohini Community Study Centre.',
       date: '05 Sep 2024 (Teachers Day)',
       signatory: 'Dr. R. K. Sharma (President)',
-      signatory2: 'S. N. Chauhan (Secretary)',
+      signatory2: 'Dharmender Kumar (Secretary)',
     },
   ],
   appointments: [
