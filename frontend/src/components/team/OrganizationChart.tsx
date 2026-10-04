@@ -97,10 +97,10 @@ export function OrganizationChart() {
           <div className="relative flex flex-col items-center">
             <OrgNode
               title="Board of Directors / Trustees"
-              role="Rajeev Kumar · Ravish Kumar · Trustees"
+              role="Rajeev Kumar · Ravish Kumar · Kalidas Debsarma"
               category="Tier 2 — Governance"
               variant="brand"
-              className="w-80"
+              className="w-96"
             />
             {/* Stem Line Down */}
             <div className="h-8 w-0.5 bg-brand" />
@@ -130,8 +130,8 @@ export function OrganizationChart() {
                 {/* Vertical drop line */}
                 <div className="absolute -top-6 h-6 w-0.5 bg-brand" />
                 <OrgNode
-                  title="Executive Director / CEO"
-                  role="Chief Executive & Operational Direction"
+                  title="Jitendar Kumar"
+                  role="Executive Director & Chief Operations Officer"
                   category="Executive Lead"
                   variant="brand"
                   className="w-full"
@@ -235,7 +235,7 @@ export function OrganizationChart() {
           <div className="absolute -left-2 top-3 h-3.5 w-3.5 rounded-full border-2 border-surface bg-brand" />
           <OrgNode
             title="Board of Directors / Trustees"
-            role="Rajeev Kumar · Ravish Kumar · Trustees"
+            role="Rajeev Kumar · Ravish Kumar · Kalidas Debsarma"
             category="Tier 2 — Governance"
             variant="brand"
             className="w-full text-left items-start"
@@ -258,8 +258,8 @@ export function OrganizationChart() {
         <div className="relative pl-6 sm:pl-8 border-l-2 border-brand">
           <div className="absolute -left-2 top-3 h-3.5 w-3.5 rounded-full border-2 border-surface bg-brand" />
           <OrgNode
-            title="Executive Director / CEO & Secretary"
-            role="Chief Executive, Secretary & Operations Direction"
+            title="Jitendar Kumar"
+            role="Executive Director & Chief Operations Officer"
             category="Tier 3 — Executive Directorate"
             variant="brand"
             className="w-full text-left items-start"

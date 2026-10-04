@@ -67,16 +67,16 @@ export const trustees: TeamMember[] = [
   },
   {
     id: 'trustee-3',
-    name: 'Director (Board Member)',
+    name: 'Kalidas Debsarma',
     role: 'Director, Board of Trustees',
     designation: 'Member, Board of Directors',
     credentials: 'Community Outreach & Non-Profit Leadership',
     level: 'trustee',
     bio: 'Oversees community-led welfare initiatives, volunteer mobilization, and ensures equitable programme reach across regional clusters.',
-    image: '/images/director_3.png',
+    image: '/images/kalidas_debsarma.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:director@shivshristiseva.org',
+      email: 'mailto:kalidas.debsarma@shivshristiseva.org',
     },
   },
   {
