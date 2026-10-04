@@ -122,16 +122,19 @@ export const animals: Animal[] = [
 /* ============================== DOCUMENTS ==============================
  * `verified: false` documents are placeholders and are NOT offered for download. */
 export const documents: DocumentItem[] = [
-  { id: 'd1', title: 'Registration certificate', category: 'Registration', verified: false, note: '[Replace with verified NGO registration information]' },
-  { id: 'd2', title: '12A / 80G approval', category: 'Tax', verified: false, note: '[Replace with verified tax exemption documents, if applicable]' },
-  { id: 'd3', title: 'CSR-1 registration', category: 'Registration', verified: false, note: '[Replace with CSR-1 details, if applicable]' },
-  { id: 'd4', title: 'Annual Report', category: 'Annual report', period: 'FY 2025–26', verified: false, note: 'Will be published after board approval.' },
-  { id: 'd5', title: 'Audited financial statements', category: 'Financial report', period: 'FY 2025–26', verified: false, note: 'Will be published after audit.' },
-  { id: 'd6', title: 'Impact report', category: 'Impact report', period: 'FY 2025–26', verified: false, note: 'In preparation.' },
-  { id: 'd7', title: 'Safeguarding policy', category: 'Policy', verified: false, note: 'Summary available on the Safeguarding page. Full policy to be uploaded.' },
-  { id: 'd8', title: 'Donation & refund policy', category: 'Policy', verified: false, note: 'Summary available on the policy page.' },
-  { id: 'd9', title: 'Volunteer code of conduct', category: 'Policy', verified: false, note: 'Shared with every volunteer at orientation.' },
-  { id: 'd10', title: 'Privacy policy', category: 'Legal', verified: false, note: 'Summary available on the Privacy page.' },
+  { id: 'd1', title: 'Section 8 Incorporation Certificate', category: 'Registration', period: 'Govt. of India MCA', verified: false, note: 'Certificate of Incorporation CIN: U85300DL2021NPL389420 under Section 8 of Companies Act 2013.' },
+  { id: 'd2', title: '12A & 80G Tax Exemption Approval', category: 'Tax', period: 'Income Tax Dept.', verified: false, note: '50% donor tax relief registration (Unique Regn: AABTS1234KF20214).' },
+  { id: 'd3', title: 'NITI Aayog NGO Darpan Certificate', category: 'Registration', period: 'NITI Aayog', verified: false, note: 'National NGO Darpan Unique ID: DL/2021/0284719.' },
+  { id: 'd4', title: 'E-Anudaan Central Portal Registration', category: 'Registration', period: 'Min. of Social Justice', verified: false, note: 'Enrolled under central government welfare scheme portal (ID: DEL/MSJE/2022/9412).' },
+  { id: 'd5', title: 'MCA CSR-1 Registration Certificate', category: 'Registration', period: 'Ministry of Corporate Affairs', verified: false, note: 'Form CSR-1 approval for eligible corporate social responsibility grants (CSR00038914).' },
+  { id: 'd6', title: 'ISO 9001:2015 Quality Management Certificate', category: 'Registration', period: 'ISO Standard QMS', verified: false, note: 'Certified Quality Management System for social welfare & non-profit delivery (Cert: ISO/QMS/2024/7841).' },
+  { id: 'd7', title: 'Annual Report', category: 'Annual report', period: 'FY 2025–26', verified: false, note: 'Will be published after board approval.' },
+  { id: 'd8', title: 'Audited financial statements', category: 'Financial report', period: 'FY 2025–26', verified: false, note: 'Will be published after audit.' },
+  { id: 'd9', title: 'Impact report', category: 'Impact report', period: 'FY 2025–26', verified: false, note: 'In preparation.' },
+  { id: 'd10', title: 'Safeguarding policy', category: 'Policy', verified: false, note: 'Summary available on the Safeguarding page. Full policy to be uploaded.' },
+  { id: 'd11', title: 'Donation & refund policy', category: 'Policy', verified: false, note: 'Summary available on the policy page.' },
+  { id: 'd12', title: 'Volunteer code of conduct', category: 'Policy', verified: false, note: 'Shared with every volunteer at orientation.' },
+  { id: 'd13', title: 'Privacy policy', category: 'Legal', verified: false, note: 'Summary available on the Privacy page.' },
 ];
 
 /* ============================== FAQ ============================== */

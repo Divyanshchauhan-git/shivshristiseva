@@ -109,11 +109,18 @@ export function Transparency() {
           <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
             <div className="rounded-2xl bg-[#0F3D44] p-5 text-white">
               <p className="text-xs font-semibold uppercase tracking-wider text-[#F4B154]">Registration information</p>
-              <dl className="mt-3 space-y-2 text-sm">
-                {Object.entries({ Registration: brand.legal.registration, PAN: brand.legal.pan, 'Tax exemption': brand.legal.taxExemption, 'CSR-1': brand.legal.csr1, FCRA: brand.legal.fcra }).map(([k, v]) => (
-                  <div key={k}><dt className="text-white/60">{k}</dt><dd>{v}</dd></div>
+                {Object.entries({
+                  'Section 8': brand.legal.section8,
+                  '12A & 80G Tax': brand.legal.taxExemption,
+                  'NITI Aayog': brand.legal.darpan,
+                  'E-Anudaan': brand.legal.eAnudaan,
+                  'MCA CSR-1': brand.legal.csr1,
+                  'ISO 9001:2015': brand.legal.iso,
+                  'PAN Number': brand.legal.pan,
+                  'FCRA Status': brand.legal.fcra,
+                }).map(([k, v]) => (
+                  <div key={k}><dt className="text-white/60 font-semibold text-xs">{k}</dt><dd className="text-white/90 text-xs mt-0.5">{v}</dd></div>
                 ))}
-              </dl>
             </div>
             <nav aria-label="Policies" className="rounded-2xl border border-line p-5 text-sm">
               <p className="font-semibold">Policy summaries</p>

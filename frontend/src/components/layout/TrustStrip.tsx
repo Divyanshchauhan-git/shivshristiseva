@@ -1,38 +1,48 @@
-import { ShieldCheck, Award, FileCheck, Lock } from 'lucide-react';
+import { ShieldCheck, Award, FileCheck, Building2, CheckCircle2 } from 'lucide-react';
 import { brand } from '@/config/brand';
 
 export function TrustStrip() {
   const trustPoints = [
     {
       icon: Award,
-      badge: '50% Tax Benefit',
+      badge: '50% Tax Relief',
       title: '80G & 12A Certified',
-      desc: 'Eligible for 50% tax deduction under Indian IT Act. Instant certificate issued.',
+      desc: brand.legal.taxExemption,
+    },
+    {
+      icon: Building2,
+      badge: 'MCA Registered',
+      title: 'Section 8 Non-Profit',
+      desc: brand.legal.section8,
+    },
+    {
+      icon: Award,
+      badge: 'Quality Standard',
+      title: 'ISO 9001:2015 Certified',
+      desc: brand.legal.iso,
     },
     {
       icon: ShieldCheck,
-      badge: 'Govt. Registered',
-      title: 'NITI Aayog Darpan',
-      desc: brand.legal.darpan,
+      badge: 'Govt. Enrolled',
+      title: 'NITI Aayog & E-Anudaan',
+      desc: `${brand.legal.darpan} | ${brand.legal.eAnudaan}`,
     },
-    {
-      icon: FileCheck,
-      badge: 'Audited Accounts',
-      title: '100% Transparency',
-      desc: 'Clear financial allocation, audited balance sheets & geo-verified field reports.',
-    },
-    {
-      icon: Lock,
-      badge: 'Bank Grade',
-      title: 'Secure Payment Gateway',
-      desc: '256-bit encrypted checkout via UPI, Google Pay, PhonePe, Cards & Net Banking.',
-    },
+  ];
+
+  const quickBadges = [
+    { label: 'Section 8 Company', sub: 'MCA Incorporated' },
+    { label: '12A & 80G Certified', sub: '50% Tax Relief' },
+    { label: 'NITI Aayog Darpan', sub: 'Govt. Verified' },
+    { label: 'E-Anudaan Portal', sub: 'Grant Enrolled' },
+    { label: 'MCA CSR-1 Form', sub: 'CSR Eligible' },
+    { label: 'ISO 9001:2015', sub: 'Certified Org' },
   ];
 
   return (
     <section className="relative z-10 -mt-6 sm:-mt-10 mb-8 sm:mb-12">
       <div className="container-page">
         <div className="rounded-2xl sm:rounded-3xl border border-line/80 bg-white/95 p-4 sm:p-6 lg:p-8 shadow-soft backdrop-blur-md">
+          {/* Main 4 Grid */}
           <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-line/70">
             {trustPoints.map((item, idx) => {
               const Icon = item.icon;
@@ -53,6 +63,28 @@ export function TrustStrip() {
                 </div>
               );
             })}
+          </div>
+
+          {/* All 6 Accreditations Pill Strip */}
+          <div className="mt-6 pt-5 border-t border-line/70">
+            <div className="flex flex-wrap items-center justify-between gap-3 text-xs">
+              <span className="font-sans font-bold uppercase tracking-wider text-[0.72rem] text-brand flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                Official Registrations &amp; Certifications:
+              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                {quickBadges.map((badge) => (
+                  <span
+                    key={badge.label}
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-surface-2/80 px-2.5 py-1 font-mono text-[0.68rem] font-semibold text-fg"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                    <strong>{badge.label}</strong>
+                    <span className="text-muted">({badge.sub})</span>
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

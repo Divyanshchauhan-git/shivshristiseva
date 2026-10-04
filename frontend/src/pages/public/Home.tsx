@@ -25,6 +25,7 @@ import { SocialRow } from '@/components/layout/Footer';
 import { cn, fmtDate, inr, pct } from '@/utils/format';
 
 import { TrustStrip } from '@/components/layout/TrustStrip';
+import { OfficialCertifications } from '@/components/layout/OfficialCertifications';
 
 const orgJsonLd = {
   '@context': 'https://schema.org', '@type': 'NGO', name: brand.name, url: brand.siteUrl, slogan: brand.tagline,
@@ -567,6 +568,7 @@ export default function Home() {
     <>
       <Hero />
       <TrustStrip />
+      <OfficialCertifications />
       <Intro />
       <Stats />
       <OurWork />

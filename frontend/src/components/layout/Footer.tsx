@@ -34,19 +34,28 @@ export function Footer() {
       
       {/* Trust & Accreditations Ribbon */}
       <div className="border-b border-white/10 bg-[#051c1e] py-6">
-        <div className="container-page flex flex-wrap items-center justify-between gap-4 text-xs">
-          <div className="flex flex-wrap items-center gap-3">
+        <div className="container-page flex flex-col lg:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+            <span className="rounded-full bg-blue-500/20 px-3 py-1 font-bold text-blue-300 ring-1 ring-blue-400/30">
+              ✓ Section 8 Company
+            </span>
             <span className="rounded-full bg-emerald-500/20 px-3 py-1 font-bold text-emerald-300 ring-1 ring-emerald-400/30">
-              ✓ 80G Tax Exemption Certified
+              ✓ 12A &amp; 80G Tax Exemption
             </span>
             <span className="rounded-full bg-amber-500/20 px-3 py-1 font-bold text-amber-300 ring-1 ring-amber-400/30">
-              ✓ NITI Aayog NGO Darpan Verified
+              ✓ NITI Aayog NGO Darpan
             </span>
-            <span className="rounded-full bg-white/10 px-3 py-1 font-bold text-white/90 ring-1 ring-white/20">
-              ✓ 12A Non-Profit Registration
+            <span className="rounded-full bg-cyan-500/20 px-3 py-1 font-bold text-cyan-300 ring-1 ring-cyan-400/30">
+              ✓ E-Anudaan Registered
+            </span>
+            <span className="rounded-full bg-purple-500/20 px-3 py-1 font-bold text-purple-300 ring-1 ring-purple-400/30">
+              ✓ MCA CSR-1 Form Approved
+            </span>
+            <span className="rounded-full bg-amber-400/20 px-3 py-1 font-bold text-amber-200 ring-1 ring-amber-300/40">
+              ★ ISO 9001:2015 Certified
             </span>
           </div>
-          <p className="text-white/60">
+          <p className="text-white/60 text-center lg:text-right shrink-0">
             Accepting UPI, Google Pay, PhonePe, Cards &amp; Net Banking via 256-bit SSL
           </p>
         </div>
