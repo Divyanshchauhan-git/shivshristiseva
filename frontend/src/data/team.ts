@@ -39,30 +39,30 @@ export const chairperson: TeamMember = {
 export const trustees: TeamMember[] = [
   {
     id: 'trustee-1',
-    name: 'Director (Board Member)',
+    name: 'Rajeev Kumar',
     role: 'Director, Board of Trustees',
     designation: 'Member, Board of Directors',
     credentials: 'Strategic Development & Social Governance',
     level: 'trustee',
     bio: 'Serves on the Board of Directors, steering long-term institutional strategy, statutory compliance, and empowering underserved communities.',
-    image: '/images/director_1.png',
+    image: '/images/rajeev_kumar.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:director@shivshristiseva.org',
+      email: 'mailto:rajeev.kumar@shivshristiseva.org',
     },
   },
   {
     id: 'trustee-2',
-    name: 'Director (Board Member)',
+    name: 'Ravish Kumar',
     role: 'Director, Board of Trustees',
     designation: 'Member, Board of Directors',
     credentials: 'Community Welfare & Institutional Growth',
     level: 'trustee',
     bio: 'Guides social welfare initiatives, healthcare partnerships, animal care standards, and grassroots mobilization.',
-    image: '/images/director_2.png',
+    image: '/images/ravish_kumar.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:director@shivshristiseva.org',
+      email: 'mailto:ravish.kumar@shivshristiseva.org',
     },
   },
   {

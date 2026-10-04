@@ -96,11 +96,11 @@ export function OrganizationChart() {
           {/* Level 2: Board of Trustees */}
           <div className="relative flex flex-col items-center">
             <OrgNode
-              title="Board of Trustees"
-              role="Governing Body & Fiduciary Oversight"
+              title="Board of Directors / Trustees"
+              role="Rajeev Kumar · Ravish Kumar · Trustees"
               category="Tier 2 — Governance"
               variant="brand"
-              className="w-72"
+              className="w-80"
             />
             {/* Stem Line Down */}
             <div className="h-8 w-0.5 bg-brand" />
@@ -234,8 +234,8 @@ export function OrganizationChart() {
         <div className="relative pl-6 sm:pl-8 border-l-2 border-brand">
           <div className="absolute -left-2 top-3 h-3.5 w-3.5 rounded-full border-2 border-surface bg-brand" />
           <OrgNode
-            title="Board of Trustees"
-            role="Governing Body & Fiduciary Oversight"
+            title="Board of Directors / Trustees"
+            role="Rajeev Kumar · Ravish Kumar · Trustees"
             category="Tier 2 — Governance"
             variant="brand"
             className="w-full text-left items-start"
