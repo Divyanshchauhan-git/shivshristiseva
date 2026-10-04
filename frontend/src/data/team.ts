@@ -67,16 +67,16 @@ export const trustees: TeamMember[] = [
   },
   {
     id: 'trustee-3',
-    name: '[Trustee Name]',
-    role: 'Trustee',
-    designation: 'Member, Board of Trustees',
-    credentials: 'Education & Child Development',
+    name: 'Director (Board Member)',
+    role: 'Director, Board of Trustees',
+    designation: 'Member, Board of Directors',
+    credentials: 'Community Outreach & Non-Profit Leadership',
     level: 'trustee',
-    bio: 'Focuses on non-formal educational curricula, school re-enrolment drives, child safeguarding policies, and youth skill-building.',
-    image: '',
+    bio: 'Oversees community-led welfare initiatives, volunteer mobilization, and ensures equitable programme reach across regional clusters.',
+    image: '/images/director_3.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:trustee3@example.org',
+      email: 'mailto:director@shivshristiseva.org',
     },
   },
   {
@@ -190,7 +190,7 @@ export const advisors: TeamMember[] = [
 export const executiveLeadership: TeamMember[] = [
   {
     id: 'exec-director',
-    name: 'Executive Director',
+    name: 'Jitendar Kumar',
     role: 'Executive Director',
     designation: 'Executive Director & Chief Operations Officer',
     credentials: 'Institutional Leadership & Operations',
@@ -199,7 +199,7 @@ export const executiveLeadership: TeamMember[] = [
     image: '/images/executive_director.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:director@shivshristiseva.org',
+      email: 'mailto:jitendar.kumar@shivshristiseva.org',
     },
   },
   {
