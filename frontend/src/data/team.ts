@@ -232,16 +232,16 @@ export const executiveLeadership: TeamMember[] = [
   },
   {
     id: 'exec-joint-secretary',
-    name: '[Joint Secretary Name]',
+    name: 'Vikash Kumar',
     role: 'Joint Secretary',
-    designation: 'Deputy Secretary & Field Liaison',
-    credentials: 'Social Work & Operations Management',
+    designation: 'Joint Secretary & Field Operations',
+    credentials: 'Social Work & Grassroots Operations',
     level: 'executive',
-    bio: 'Assists the General Secretary in operational supervision, field centre liaison, and volunteer network engagement.',
-    image: '',
+    bio: 'Assists the General Secretary in operational supervision, field centre liaison, ground welfare initiatives, and volunteer network engagement.',
+    image: '/images/vikash_kumar.png',
     socials: {
       linkedin: 'https://linkedin.com',
-      email: 'mailto:jointsecretary@example.org',
+      email: 'mailto:vikash.kumar@shivshristiseva.org',
     },
   },
 ];

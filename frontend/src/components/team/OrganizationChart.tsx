@@ -150,6 +150,9 @@ export function OrganizationChart() {
                   category="Secretariat"
                   variant="default"
                   className="w-full"
+                  items={[
+                    'Vikash Kumar (Joint Secretary - Field Operations)',
+                  ]}
                 />
               </div>
             </div>
