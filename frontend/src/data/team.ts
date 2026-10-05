@@ -334,12 +334,18 @@ export const communicationTeam: TeamMember[] = [
 export const programmeTeam: TeamMember[] = [
   {
     id: 'prog-manager',
-    name: '[Programme Manager Name]',
-    role: 'Programme Manager',
+    name: 'Devashish Chettri',
+    role: 'Program Manager',
+    designation: 'Program Manager — Programmes & Projects',
+    credentials: 'Field Operations & Programme Leadership',
+    level: 'manager',
     department: 'Programmes & Projects',
-    bio: 'Supervises all active community verticals including education centres, healthcare camps, and animal care rescue lines.',
-    image: '',
-    socials: { email: 'mailto:programmes@example.org' },
+    bio: 'Supervises all active community verticals including education centres, healthcare camps, skill training modules, and animal care rescue lines.',
+    image: '/images/devashish_chettri.png',
+    socials: {
+      linkedin: 'https://linkedin.com',
+      email: 'mailto:devashish.chettri@shivshristiseva.org',
+    },
   },
   {
     id: 'prog-project-assistants',

@@ -205,7 +205,7 @@ export function OrganizationChart() {
                   category="Branch C"
                   className="w-full"
                   items={[
-                    'Programme & Project Management',
+                    'Devashish Chettri (Program Manager)',
                     'Training & Skill Mentorship',
                     'Consultants & Ground Field Staff',
                   ]}
@@ -299,6 +299,7 @@ export function OrganizationChart() {
               category="Department Branch 3"
               className="w-full text-left items-start"
               items={[
+                'Devashish Chettri (Program Manager)',
                 'Education, Healthcare & Animal Welfare Projects',
                 'Training Assistants & Ground Volunteers',
               ]}
