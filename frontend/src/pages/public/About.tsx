@@ -6,8 +6,8 @@ import { PageHero } from '@/components/layout/PageHero';
 import { SectionHeader, DemoNote, Reveal } from '@/components/ui/Section';
 import { ButtonLink } from '@/components/ui/Button';
 import { Media } from '@/components/media/Media';
-import { Scene } from '@/components/media/Scene';
-import { milestones, team } from '@/data/content';
+import { milestones } from '@/data/content';
+import { chairperson, trustees } from '@/data/team';
 import { programmes } from '@/data/programmes';
 import { Icon } from '@/components/media/Icon';
 import { TrustStrip } from '@/components/layout/TrustStrip';
@@ -120,10 +120,11 @@ export default function About() {
               {programmes.slice(0, 8).map((p) => <li key={p.slug}><Link to={`/programmes/${p.slug}`} className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-sm hover:border-brand-text/50"><Icon name={p.icon} className="h-4 w-4 text-brand-text" />{p.title}</Link></li>)}
             </ul>
           </div>
-          <div className="relative overflow-hidden rounded-3xl">
-            <Scene theme="environment" seed={22} className="aspect-[4/3] w-full" />
+          <div className="relative overflow-hidden rounded-3xl shadow-lift">
+            <img src="/images/environment_plantation.jpg" alt="Operating areas and environment drives" className="aspect-[4/3] w-full object-cover" />
             <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-surface/95 p-4 text-sm shadow-soft backdrop-blur">
-              <p className="font-semibold">Map of operating areas</p><p className="text-muted">Add a map once locations are verified. Avoid exact addresses for sensitive programmes.</p>
+              <p className="font-semibold text-fg">Active Operating Zones</p>
+              <p className="text-muted">Delhi NCR, Uttar Pradesh &amp; expanding field volunteer networks across Northern India.</p>
             </div>
           </div>
         </div>
@@ -131,21 +132,30 @@ export default function About() {
 
       <section id="team" className="section bg-surface-2/60" aria-labelledby="team-title">
         <div className="container-page">
-          <SectionHeader id="team-title" eyebrow="Team & leadership" title="The people behind the work." text="Replace these placeholders with real team members who have agreed to be listed." action={<ButtonLink to="/team" variant="secondary" size="sm">View Full Team & Governance →</ButtonLink>} />
+          <SectionHeader id="team-title" eyebrow="Team & leadership" title="The people behind the work." text="Governing trustees and dedicated leaders steering transparent community service." action={<ButtonLink to="/team" variant="secondary" size="sm">View Full Team & Governance →</ButtonLink>} />
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
-            {team.map((m, i) => (
-              <div key={m.role} className="text-center">
-                <div className="mx-auto h-32 w-32 overflow-hidden rounded-full ring-4 ring-surface"><Scene theme={m.theme} seed={i + 60} className="h-full w-full" birds={false} /></div>
-                <p className="mt-3 font-semibold">{m.name}</p><p className="text-sm text-muted">{m.role}</p>
+            {[chairperson, ...trustees.slice(0, 5)].map((m) => (
+              <div key={m.id} className="text-center">
+                <div className="mx-auto h-32 w-32 overflow-hidden rounded-full ring-4 ring-surface shadow-soft bg-surface-2">
+                  {m.image ? (
+                    <img src={m.image} alt={m.name} className="h-full w-full object-cover object-top" />
+                  ) : (
+                    <Media theme="community" seed={12} alt={m.name} className="h-full w-full" />
+                  )}
+                </div>
+                <p className="mt-3 font-semibold text-fg">{m.name}</p>
+                <p className="text-xs text-muted">{m.role}</p>
               </div>
             ))}
           </div>
-          <div className="mt-12 grid gap-6 rounded-3xl bg-surface p-6 sm:p-8 md:grid-cols-[auto_1fr]">
-            <div className="mx-auto h-40 w-40 overflow-hidden rounded-3xl"><Scene theme="community" seed={70} className="h-full w-full" /></div>
+          <div className="mt-12 grid gap-6 rounded-3xl bg-surface p-6 sm:p-8 md:grid-cols-[auto_1fr] shadow-soft border border-line items-center">
+            <div className="mx-auto h-40 w-40 overflow-hidden rounded-3xl shadow-soft ring-4 ring-brand/10">
+              <img src={chairperson.image} alt={chairperson.name} className="h-full w-full object-cover object-top" />
+            </div>
             <div>
-              <p className="eyebrow">Founder&rsquo;s note</p>
-              <blockquote className="mt-3 font-display text-2xl leading-snug">&ldquo;[Replace with a short, real message from the founder or leadership.]&rdquo;</blockquote>
-              <p className="mt-3 text-sm text-muted">[Founder name], Founder &amp; Managing Trustee</p>
+              <p className="eyebrow">Chairperson&rsquo;s Note</p>
+              <blockquote className="mt-3 font-display text-2xl leading-snug text-fg">&ldquo;True community service is rooted in empathy, action, and accountability. Every woman empowered, child educated, and animal protected brings us closer to a humane society.&rdquo;</blockquote>
+              <p className="mt-3 text-sm font-semibold text-brand-text">{chairperson.name}, <span className="font-normal text-muted">{chairperson.role}</span></p>
             </div>
           </div>
         </div>

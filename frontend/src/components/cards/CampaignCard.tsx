@@ -33,7 +33,7 @@ export function CampaignCard({ c, index = 0 }: { c: Campaign; index?: number }) 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-lift">
       <div className="relative">
-        <Media theme={c.theme} seed={index + 11} alt={`Illustration for ${c.title}`} ratio="aspect-[16/10]" />
+        <Media theme={c.theme} seed={index + 11} src={c.image} alt={c.title} ratio="aspect-[16/10]" />
         <div className="absolute left-3 top-3 flex gap-2">
           <Badge tone="plain" className="bg-white/90 text-[#0F3D44]">{c.category}</Badge>
           {c.urgent && <Badge tone="plain" className="bg-[#BE4832] text-white" dot>Urgent</Badge>}

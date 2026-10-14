@@ -98,6 +98,7 @@ export interface Story {
   /** Consent recorded for publishing; names are changed unless consent covers real names. */
   consent: 'recorded' | 'anonymised';
   status: PublishStatus;
+  image?: string;
 }
 
 export type EventCategory = 'Health camp' | 'Education drive' | 'Vaccination drive' | 'Food distribution' | 'Tree plantation' | 'Volunteer meetup' | 'Awareness';
@@ -146,6 +147,7 @@ export interface Animal {
   temperament: string;
   description: string;
   seed: number;
+  image?: string;
 }
 
 export interface ImpactRecord {

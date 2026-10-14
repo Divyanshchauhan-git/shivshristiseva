@@ -14,6 +14,7 @@ export const stories: Story[] = [
     ],
     impact: 'Re-enrolled in Class 7 and attending regularly.',
     category: 'Education', kind: 'success', programme: 'education', theme: 'education',
+    image: '/images/child_education.jpg',
     location: 'Urban learning centre', date: '2026-09-12', author: 'Field team', tags: ['dropout prevention', 'mentoring'],
     consent: 'anonymised', status: 'published',
   },
@@ -27,6 +28,7 @@ export const stories: Story[] = [
     ],
     impact: 'Treated, vaccinated, sterilised and adopted.',
     category: 'Animals', kind: 'animal', programme: 'animal-welfare', theme: 'animals',
+    image: '/images/animal_adoption_family.jpg',
     location: 'City market area', date: '2026-08-28', author: 'Animal welfare team', tags: ['rescue', 'adoption'],
     consent: 'recorded', status: 'published',
   },
@@ -40,6 +42,7 @@ export const stories: Story[] = [
     ],
     impact: 'Earning a regular income from home.',
     category: 'Women', kind: 'success', programme: 'women-empowerment', theme: 'women',
+    image: '/images/women_artisan_crafts.jpg',
     location: 'Peri-urban settlement', date: '2026-08-10', author: 'Programme team', tags: ['livelihood', 'tailoring'],
     consent: 'anonymised', status: 'published',
   },
@@ -53,6 +56,7 @@ export const stories: Story[] = [
     ],
     impact: 'Diagnosed early and on regular treatment.',
     category: 'Healthcare', kind: 'success', programme: 'healthcare', theme: 'health',
+    image: '/images/healthcare_camp.jpg',
     location: 'Community health camp', date: '2026-07-22', author: 'Health team', tags: ['screening', 'referral'],
     consent: 'anonymised', status: 'published',
   },
@@ -66,6 +70,7 @@ export const stories: Story[] = [
     ],
     impact: 'Two years of weekly reading sessions.',
     category: 'Volunteer', kind: 'volunteer', programme: 'education', theme: 'volunteer',
+    image: '/images/volunteer_team.jpg',
     location: 'Community library', date: '2026-07-05', author: 'Volunteer contributor', tags: ['volunteering', 'reading'],
     consent: 'recorded', status: 'published',
   },
@@ -78,6 +83,7 @@ export const stories: Story[] = [
     ],
     impact: 'Lake edge cleared and a monthly residents’ check agreed.',
     category: 'Community', kind: 'field', programme: 'environment-community', theme: 'environment',
+    image: '/images/environment_plantation.jpg',
     location: 'Neighbourhood lake', date: '2026-06-18', author: 'Field team', tags: ['clean-up', 'community'],
     consent: 'recorded', status: 'published',
   },
@@ -97,26 +103,26 @@ export const events: NGOEvent[] = [
 
 /* ============================== GALLERY ============================== */
 const items = (theme: GalleryAlbum['theme'], captions: string[], base: number) =>
-  captions.map((caption, i) => ({ id: `${theme}-${base}-${i}`, caption, theme, seed: base + i * 7 }));
+  captions.map((caption, i) => ({ id: `${theme}-${base}-${i}`, caption, theme, seed: base + i }));
 
 export const albums: GalleryAlbum[] = [
-  { id: 'g1', title: 'Education kit packing day', programme: 'education', theme: 'education', date: '2026-09-14', kind: 'photo', published: true, items: items('education', ['Volunteers sorting notebooks', 'Kits ready for distribution', 'Packing station', 'Checking the kit list'], 11) },
-  { id: 'g2', title: 'Vaccination drive, August', programme: 'animal-welfare', theme: 'animals', date: '2026-08-30', kind: 'photo', published: true, items: items('animals', ['Vet team preparing vaccines', 'A feeder guiding the team', 'Recording vaccinated dogs', 'Recovery check'], 23) },
-  { id: 'g3', title: 'Flood relief response', programme: 'emergency-relief', theme: 'emergency', date: '2026-09-20', kind: 'photo', published: true, items: items('emergency', ['Relief kits loaded', 'Distribution at a camp', 'Drinking water supply'], 37) },
-  { id: 'g4', title: 'Health camp highlights', programme: 'healthcare', theme: 'health', date: '2026-07-20', kind: 'video', published: true, items: items('health', ['Camp walkthrough (video)', 'Doctor explains screening (video)'], 41) },
-  { id: 'g5', title: 'Tree plantation with students', programme: 'environment-community', theme: 'environment', date: '2026-07-19', kind: 'photo', published: true, items: items('environment', ['Digging pits', 'Saplings and tree guards', 'Students watering', 'Group after the drive'], 53) },
-  { id: 'g6', title: 'Tailoring batch graduation', programme: 'women-empowerment', theme: 'women', date: '2026-06-28', kind: 'video', published: true, items: items('women', ['Graduation day (video)', 'Showcase of work (video)'], 61) },
+  { id: 'g1', title: 'Education kit packing day', programme: 'education', theme: 'education', date: '2026-09-14', kind: 'photo', published: true, items: items('education', ['Volunteers sorting notebooks', 'Kits ready for distribution', 'Packing station', 'Checking the kit list'], 0) },
+  { id: 'g2', title: 'Street Animal Care & Vaccination Drive', programme: 'animal-welfare', theme: 'animals', date: '2026-08-30', kind: 'photo', published: true, items: items('animals', ['Anti-rabies vaccination on street', 'Community indie dog feeding route', 'Partner vet clinic treatment', 'Rescued puppy in volunteer care'], 4) },
+  { id: 'g3', title: 'Flood relief response', programme: 'emergency-relief', theme: 'emergency', date: '2026-09-20', kind: 'photo', published: true, items: items('emergency', ['Relief kits loaded', 'Distribution at a camp', 'Drinking water supply'], 0) },
+  { id: 'g4', title: 'Health camp highlights', programme: 'healthcare', theme: 'health', date: '2026-07-20', kind: 'video', published: true, items: items('health', ['Camp walkthrough (video)', 'Doctor explains screening (video)'], 0) },
+  { id: 'g5', title: 'Tree plantation with students', programme: 'environment-community', theme: 'environment', date: '2026-07-19', kind: 'photo', published: true, items: items('environment', ['Digging pits', 'Saplings and tree guards', 'Students watering', 'Group after the drive'], 0) },
+  { id: 'g6', title: 'Women Self-Help & Skills Centre', programme: 'women-empowerment', theme: 'women', date: '2026-06-28', kind: 'photo', published: true, items: items('women', ['Vocational sewing batch training', 'Artisan handicraft embroidery', 'Self-Help Group savings circle', 'Digital literacy computer class'], 2) },
 ];
 
 /* ============================== ANIMALS ==============================
  * Sample adoption/foster listings. Only a general area is shown publicly. */
 export const animals: Animal[] = [
-  { id: 'a1', code: 'SSS-D-0142', name: 'Kaalu', species: 'Dog', ageEstimate: '~2 years', gender: 'Male', area: 'North zone', status: 'Available for adoption', health: 'Healthy, recovered from a skin infection', vaccinated: true, sterilised: true, temperament: 'Calm, good with children', description: 'Kaalu loves long walks and is house-trained. He does best as the only dog.', seed: 3 },
-  { id: 'a2', code: 'SSS-C-0077', name: 'Mishti', species: 'Cat', ageEstimate: '~8 months', gender: 'Female', area: 'Central zone', status: 'Available for adoption', health: 'Healthy', vaccinated: true, sterilised: true, temperament: 'Playful and curious', description: 'Mishti was found as a kitten and has grown up with a foster family. Litter-trained.', seed: 8 },
-  { id: 'a3', code: 'SSS-D-0151', name: 'Chotu', species: 'Dog', ageEstimate: '~4 months', gender: 'Male', area: 'East zone', status: 'Needs foster', health: 'Recovering from a leg injury', vaccinated: false, sterilised: false, temperament: 'Gentle, a little shy', description: 'Chotu needs a quiet foster home for 4–6 weeks while his leg heals. We cover food and vet costs.', seed: 14 },
-  { id: 'a4', code: 'SSS-D-0118', name: 'Rani', species: 'Dog', ageEstimate: '~5 years', gender: 'Female', area: 'South zone', status: 'Available for adoption', health: 'Healthy, three-legged and fully mobile', vaccinated: true, sterilised: true, temperament: 'Affectionate, loves people', description: 'Rani lost a leg in an accident but gets around easily. She would suit a calm home.', seed: 19 },
-  { id: 'a5', code: 'SSS-C-0081', name: 'Bholu', species: 'Cat', ageEstimate: '~3 years', gender: 'Male', area: 'Central zone', status: 'Under treatment', health: 'Being treated for an eye infection', vaccinated: true, sterilised: true, temperament: 'Relaxed', description: 'Bholu will be available for adoption after his treatment is complete.', seed: 26 },
-  { id: 'a6', code: 'SSS-D-0099', name: 'Sheru', species: 'Dog', ageEstimate: '~1 year', gender: 'Male', area: 'West zone', status: 'Adopted', health: 'Healthy', vaccinated: true, sterilised: true, temperament: 'Energetic', description: 'Sheru found his home in August. Thank you to his foster family.', seed: 31 },
+  { id: 'a1', code: 'SSS-D-0142', name: 'Kaalu', species: 'Dog', ageEstimate: '~2 years', gender: 'Male', area: 'North zone', status: 'Available for adoption', health: 'Healthy, recovered from a skin infection', vaccinated: true, sterilised: true, temperament: 'Calm, good with children', description: 'Kaalu loves long walks and is house-trained. He does best as the only dog.', seed: 1, image: '/images/animal_street_feeding.jpg' },
+  { id: 'a2', code: 'SSS-C-0077', name: 'Mishti', species: 'Cat', ageEstimate: '~8 months', gender: 'Female', area: 'Central zone', status: 'Available for adoption', health: 'Healthy', vaccinated: true, sterilised: true, temperament: 'Playful and curious', description: 'Mishti was found as a kitten and has grown up with a foster family. Litter-trained.', seed: 5, image: '/images/animal_cat_care.jpg' },
+  { id: 'a3', code: 'SSS-D-0151', name: 'Chotu', species: 'Dog', ageEstimate: '~4 months', gender: 'Male', area: 'East zone', status: 'Needs foster', health: 'Recovering from a leg injury', vaccinated: false, sterilised: false, temperament: 'Gentle, a little shy', description: 'Chotu needs a quiet foster home for 4–6 weeks while his leg heals. We cover food and vet costs.', seed: 3, image: '/images/animal_puppy_rescue.jpg' },
+  { id: 'a4', code: 'SSS-D-0118', name: 'Rani', species: 'Dog', ageEstimate: '~5 years', gender: 'Female', area: 'South zone', status: 'Available for adoption', health: 'Healthy, three-legged and fully mobile', vaccinated: true, sterilised: true, temperament: 'Affectionate, loves people', description: 'Rani lost a leg in an accident but gets around easily. She would suit a calm home.', seed: 2, image: '/images/animal_vet_clinic.jpg' },
+  { id: 'a5', code: 'SSS-C-0081', name: 'Bholu', species: 'Cat', ageEstimate: '~3 years', gender: 'Male', area: 'Central zone', status: 'Under treatment', health: 'Being treated for an eye infection', vaccinated: true, sterilised: true, temperament: 'Relaxed', description: 'Bholu will be available for adoption after his treatment is complete.', seed: 5, image: '/images/animal_cat_care.jpg' },
+  { id: 'a6', code: 'SSS-D-0099', name: 'Sheru', species: 'Dog', ageEstimate: '~1 year', gender: 'Male', area: 'West zone', status: 'Adopted', health: 'Healthy', vaccinated: true, sterilised: true, temperament: 'Energetic', description: 'Sheru found his home in August. Thank you to his foster family.', seed: 6, image: '/images/animal_adoption_family.jpg' },
 ];
 
 /* ============================== DOCUMENTS ==============================

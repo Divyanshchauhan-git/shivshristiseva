@@ -9,7 +9,7 @@ import { fmtDate } from '@/utils/format';
 export function StoryCard({ s, index = 0 }: { s: Story; index?: number }) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-shadow hover:shadow-lift">
-      <Media theme={s.theme} seed={index + 21} alt={`Illustration for the story: ${s.title}`} ratio="aspect-[3/2]" />
+      <Media theme={s.theme} seed={index + 21} src={s.image} alt={s.title} ratio="aspect-[3/2]" />
       <div className="flex flex-1 flex-col p-5">
         <div className="flex flex-wrap items-center gap-2 text-xs">
           <Badge tone="brand">{programmeBySlug(s.programme)?.title ?? s.category}</Badge>

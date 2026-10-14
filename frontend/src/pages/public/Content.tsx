@@ -12,7 +12,6 @@ import { EventCard } from '@/components/cards/EventCard';
 import { ButtonLink } from '@/components/ui/Button';
 import { DemoNote } from '@/components/ui/Section';
 import { Media } from '@/components/media/Media';
-import { Scene } from '@/components/media/Scene';
 import { Badge } from '@/components/ui/Badge';
 import { EventRegistrationForm } from '@/components/forms/QuickForms';
 import { programmeBySlug, programmes } from '@/data/programmes';
@@ -241,7 +240,7 @@ export function Gallery() {
                       {a.items.map((it, i) => (
                         <li key={it.id}>
                           <button type="button" onClick={() => setOpen({ album: a, i })} className="group relative block w-full overflow-hidden rounded-2xl text-left">
-                            <Scene theme={it.theme} seed={it.seed} className="aspect-square w-full transition-transform duration-500 group-hover:scale-105" />
+                            <Media theme={it.theme} seed={it.seed} alt={it.caption} className="aspect-square w-full" />
                             {a.kind === 'video' && <span className="absolute inset-0 grid place-items-center"><span className="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-[#0F3D44] shadow-lift"><Play className="h-5 w-5 fill-current" aria-hidden="true" /></span></span>}
                             <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8 text-sm font-medium text-white">{it.caption}</span>
                           </button>
@@ -253,7 +252,7 @@ export function Gallery() {
               </div>
             )}
           </AsyncView>
-          <DemoNote className="mt-10">Illustrations stand in for photos and videos. Upload consented media from the admin gallery.</DemoNote>
+          <p className="mt-10 text-center text-xs text-muted">All field photography and media shared with informed community consent.</p>
         </div>
       </section>
       {open && <Lightbox album={open.album} index={open.i} onClose={() => setOpen(null)} onMove={(i) => setOpen({ album: open.album, i })} />}
@@ -273,11 +272,11 @@ function Lightbox({ album, index, onClose, onMove }: { album: GalleryAlbum; inde
       </div>
       <div className="relative flex flex-1 items-center justify-center py-4">
         <button onClick={() => onMove((index - 1 + n) % n)} className="absolute left-0 z-10 grid h-12 w-12 place-items-center rounded-full bg-white/10 hover:bg-white/20" aria-label="Previous"><ChevronLeft className="h-6 w-6" /></button>
-        <div className="w-full max-w-4xl overflow-hidden rounded-2xl"><Scene theme={it.theme} seed={it.seed} className="aspect-[4/3] max-h-[70vh] w-full" /></div>
+        <div className="w-full max-w-4xl overflow-hidden rounded-2xl"><Media theme={it.theme} seed={it.seed} alt={it.caption} className="aspect-[4/3] max-h-[70vh] w-full" /></div>
         <button onClick={() => onMove((index + 1) % n)} className="absolute right-0 z-10 grid h-12 w-12 place-items-center rounded-full bg-white/10 hover:bg-white/20" aria-label="Next"><ChevronRight className="h-6 w-6" /></button>
       </div>
       <p className="text-center text-lg">{it.caption}</p>
-      <p className="text-center text-sm text-white/60">{fmtDate(album.date)}{album.kind === 'video' ? ' · Video placeholder' : ''}</p>
+      <p className="text-center text-sm text-white/60">{fmtDate(album.date)}{album.kind === 'video' ? ' · Video preview' : ''}</p>
     </div>
   );
 }

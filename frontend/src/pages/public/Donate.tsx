@@ -7,7 +7,6 @@ import type { DonationStatusResponse } from '@/types';
 import { DonationForm } from '@/components/forms/DonationForm';
 import { ButtonLink, Button } from '@/components/ui/Button';
 import { LoadingBlock, ErrorState } from '@/components/ui/States';
-import { Scene } from '@/components/media/Scene';
 import { fmtDateTime, inr } from '@/utils/format';
 import { brand } from '@/config/brand';
 
@@ -85,7 +84,10 @@ export function DonationStatus() {
   return (
     <section className="container-page max-w-3xl py-12 sm:py-16">
       <div className="overflow-hidden rounded-[2rem] border border-line bg-surface shadow-lift">
-        <div className="relative h-36 overflow-hidden" aria-hidden="true"><Scene theme={d.status === 'success' ? 'volunteer' : 'community'} seed={9} className="h-full w-full" /></div>
+        <div className="relative h-36 overflow-hidden" aria-hidden="true">
+          <img src={d.status === 'success' ? '/images/hero_community.jpg' : '/images/volunteer_team.jpg'} alt="" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-[#0F3D44]/40" />
+        </div>
         <div className="-mt-10 px-6 pb-8 text-center sm:px-10">
           <span className={`relative mx-auto grid h-20 w-20 place-items-center rounded-full border-[6px] border-surface text-white ${v.tone}`}><I className="h-9 w-9" aria-hidden="true" /></span>
           <h1 className="mt-4 text-3xl sm:text-4xl" tabIndex={-1}>{v.title}{d.status === 'success' && d.donorName !== 'Anonymous donor' ? `, ${d.donorName.split(' ')[0]}` : ''}</h1>

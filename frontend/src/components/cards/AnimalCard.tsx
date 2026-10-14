@@ -13,7 +13,7 @@ export function AnimalCard({ a, onInterest }: { a: Animal; onInterest: (a: Anima
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface">
       <div className="relative">
-        <Media theme="animals" seed={a.seed} alt={`${a.species} named ${a.name}`} ratio="aspect-square" />
+        <Media theme="animals" seed={a.seed} src={a.image} alt={`${a.species} named ${a.name}`} ratio="aspect-square" />
         <div className="absolute left-3 top-3"><StatusBadge status={a.status} /></div>
         <span className="absolute bottom-3 right-3 rounded-md bg-black/55 px-2 py-0.5 font-mono text-[0.7rem] text-white">{a.code}</span>
       </div>

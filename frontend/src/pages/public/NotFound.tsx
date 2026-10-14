@@ -1,7 +1,7 @@
 import { Compass } from 'lucide-react';
 import { useSeo } from '@/hooks/useSeo';
 import { ButtonLink } from '@/components/ui/Button';
-import { Scene } from '@/components/media/Scene';
+import { Media } from '@/components/media/Media';
 
 export default function NotFound() {
   useSeo({ title: 'Page not found', noindex: true });
@@ -17,7 +17,7 @@ export default function NotFound() {
           <ButtonLink to="/donate" variant="donate">Donate</ButtonLink>
         </div>
       </div>
-      <div className="overflow-hidden rounded-[2rem]"><Scene theme="community" seed={404} className="aspect-[4/3] w-full" /></div>
+      <div className="overflow-hidden rounded-[2rem] shadow-soft"><Media theme="community" seed={404} alt="Shivshristi Seva Sansthan community work" className="aspect-[4/3] w-full" /></div>
     </section>
   );
 }

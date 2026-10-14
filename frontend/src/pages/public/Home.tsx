@@ -9,7 +9,6 @@ import { useAsync } from '@/hooks/useAsync';
 import { contentApi } from '@/services/api';
 import { programmes } from '@/data/programmes';
 import { headlinePeriod, headlineStats } from '@/data/impact';
-import { Scene } from '@/components/media/Scene';
 import { Media } from '@/components/media/Media';
 import { ButtonLink } from '@/components/ui/Button';
 import { DemoNote, Reveal, SectionHeader } from '@/components/ui/Section';
@@ -123,8 +122,8 @@ function Hero() {
             
             <div className="group relative overflow-hidden rounded-3xl shadow-soft bg-surface-2 ring-4 ring-white">
               <img
-                src="/images/animal_rescue.jpg"
-                alt="Compassionate animal care and rescue"
+                src="/images/animal_street_feeding.jpg"
+                alt="Compassionate street animal care and feeding"
                 className="aspect-square h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <span className="absolute bottom-2.5 left-2.5 rounded-full bg-black/60 px-2 py-0.5 text-[0.68rem] font-medium text-white backdrop-blur-sm">
@@ -134,7 +133,7 @@ function Hero() {
 
             <div className="group relative overflow-hidden rounded-3xl rounded-br-[4.5rem] shadow-soft bg-surface-2 ring-4 ring-white">
               <img
-                src="/images/women_livelihood.jpg"
+                src="/images/women_sewing_centre.jpg"
                 alt="Women empowerment and livelihood training"
                 className="aspect-square h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
@@ -274,7 +273,7 @@ function FeaturedCampaign() {
             return (
               <article className="grid overflow-hidden rounded-3xl border border-line bg-surface shadow-soft lg:grid-cols-[1.1fr_1fr]">
                 <div className="relative min-h-[16rem]">
-                  <Scene theme={c.theme} seed={31} className="absolute inset-0 h-full w-full" />
+                  <Media theme={c.theme} seed={31} alt={c.title} className="absolute inset-0 h-full w-full" />
                   <Badge tone="plain" className="absolute left-5 top-5 bg-white/90 text-[#0F3D44]" dot>Featured campaign</Badge>
                 </div>
                 <div className="p-6 sm:p-10">
@@ -403,7 +402,7 @@ function Updates() {
                   return (
                     <li key={u.id}>
                       <Link to={u.to} className="group flex items-center gap-4 p-4 hover:bg-surface-2/60 sm:p-5">
-                        <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl"><Scene theme={u.theme} seed={50 + i} className="h-full w-full" birds={false} /></div>
+                        <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-xl"><Media theme={u.theme} seed={50 + i} alt={u.title} className="h-full w-full" /></div>
                         <div className="min-w-0 flex-1">
                           <p className="flex items-center gap-1.5 text-xs text-muted"><I className="h-3.5 w-3.5" aria-hidden="true" />{u.kind} · <time dateTime={u.date}>{fmtDate(u.date, { day: 'numeric', month: 'short' })}</time></p>
                           <p className="mt-1 font-semibold leading-snug group-hover:text-brand-text">{u.title}</p>
@@ -427,9 +426,11 @@ function VolunteerCta() {
   return (
     <section className="section" aria-labelledby="vol-title">
       <div className="container-page">
-        <div className="relative overflow-hidden rounded-[2rem] bg-[#EFA23A]">
-          <div className="absolute inset-0" aria-hidden="true"><Scene theme="volunteer" seed={7} className="h-full w-full" /></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D44] via-[#0F3D44]/60 to-transparent sm:bg-gradient-to-r sm:from-[#0F3D44] sm:via-[#0F3D44]/75 sm:to-transparent" aria-hidden="true" />
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#0F3D44]">
+          <div className="absolute inset-0" aria-hidden="true">
+            <img src="/images/volunteer_team.jpg" alt="Volunteers in action" className="h-full w-full object-cover object-center" />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D44] via-[#0F3D44]/75 to-transparent sm:bg-gradient-to-r sm:from-[#0F3D44] sm:via-[#0F3D44]/80 sm:to-transparent" aria-hidden="true" />
           <div className="relative max-w-xl p-8 pt-40 text-white sm:p-14">
             <h2 id="vol-title" className="text-4xl text-white sm:text-5xl">Your time can make a difference.</h2>
             <p className="mt-4 text-lg text-white/85">Teach a child to read, walk a feeding route, help at a health camp or lend your professional skills. Two hours a week is enough to start.</p>

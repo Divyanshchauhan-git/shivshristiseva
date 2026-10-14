@@ -13,13 +13,13 @@ export function PageHero({ title, eyebrow, text, crumbs, theme = 'community', se
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#072427] via-[#0B3B3E] to-[#0A3338] text-white">
-      <div className="absolute inset-y-0 right-0 hidden w-[50%] md:block" aria-hidden="true">
+      <div className="absolute inset-y-0 right-0 hidden w-[55%] md:block" aria-hidden="true">
         {photo ? (
-          <img src={photo} alt="" className="h-full w-full object-cover object-center opacity-40 mix-blend-luminosity" />
+          <img src={photo} alt="" className="h-full w-full object-cover object-center opacity-35" />
         ) : (
           <Scene theme={theme} seed={seed} className="h-full w-full opacity-50" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#072427] via-[#072427]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#072427] via-[#072427]/75 to-transparent" />
       </div>
       <div className="absolute inset-x-0 bottom-0 h-28 md:hidden" aria-hidden="true">
         {photo ? (

@@ -9,7 +9,6 @@ import { TextField } from '@/components/ui/Field';
 import { Button } from '@/components/ui/Button';
 import { Alert } from '@/components/ui/Alert';
 import { Logo } from '@/components/layout/Logo';
-import { Scene } from '@/components/media/Scene';
 import { email as emailRule } from '@/utils/validate';
 
 export default function Login() {
@@ -38,8 +37,8 @@ export default function Login() {
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden overflow-hidden bg-[#0F3D44] lg:block">
-        <Scene theme="community" seed={77} className="absolute inset-0 h-full w-full opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D44] via-[#0F3D44]/40 to-transparent" />
+        <img src="/images/volunteer_team.jpg" alt="Foundation team" className="absolute inset-0 h-full w-full object-cover opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D44] via-[#0F3D44]/50 to-transparent" />
         <div className="absolute bottom-0 p-12 text-white">
           <h2 className="max-w-md text-4xl text-white">Run programmes, campaigns and volunteers from one place.</h2>
           <p className="mt-3 max-w-md text-white/75">Access is limited by role. Every change is recorded in the audit log.</p>

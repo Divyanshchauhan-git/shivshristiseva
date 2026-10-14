@@ -8,7 +8,7 @@ import { VolunteerForm } from '@/components/forms/VolunteerForm';
 import { PartnershipForm } from '@/components/forms/PartnershipForm';
 import { FundraiserForm } from '@/components/forms/QuickForms';
 import { ContactForm } from '@/components/forms/ContactForm';
-import { Scene } from '@/components/media/Scene';
+import { Media } from '@/components/media/Media';
 import { Badge } from '@/components/ui/Badge';
 import { EmptyState } from '@/components/ui/States';
 
@@ -29,7 +29,10 @@ export function GetInvolved() {
         <div className="container-page grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ways.map(({ t, d, to, i: I, theme }, idx) => (
             <Link key={t} to={to} className="group overflow-hidden rounded-3xl border border-line bg-surface transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-lift">
-              <div className="relative h-32"><Scene theme={theme} seed={idx + 30} className="h-full w-full" /><span className="absolute bottom-3 left-4 grid h-11 w-11 place-items-center rounded-xl bg-surface text-brand-text shadow-soft"><I className="h-5 w-5" aria-hidden="true" /></span></div>
+              <div className="relative h-36">
+                <Media theme={theme} seed={idx + 30} alt={t} className="h-full w-full" />
+                <span className="absolute bottom-3 left-4 grid h-11 w-11 place-items-center rounded-xl bg-surface text-brand-text shadow-soft"><I className="h-5 w-5" aria-hidden="true" /></span>
+              </div>
               <div className="p-6"><h2 className="text-2xl group-hover:text-brand-text">{t}</h2><p className="mt-2 text-muted">{d}</p><span className="mt-4 inline-block text-sm font-semibold text-brand-text">Get started →</span></div>
             </Link>
           ))}
